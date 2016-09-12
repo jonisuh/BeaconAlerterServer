@@ -1,0 +1,30 @@
+doctype html
+html(ng-app='Vidzy')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-resource.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.js')
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
+
+
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+
+    script(src='/app.js')
+    script(src='/controllers/home.controller.js')
+    script(src='/controllers/addvideo.controller.js')
+    script(src='/controllers/editvideo.controller.js')
+    script(src='/controllers/removevideo.controller.js')
+    script(src='/auth/register/register.controller.js')
+    script(src='/auth/login/login.controller.js')
+    script(src='/services/authentication.service.js')
+    script(src='/partials/navigation/navigation.directive.js')
+    script(src='/partials/navigation/navigation.controller.js')
+
+    
+  body
+    block content
