@@ -1,6 +1,6 @@
 // config/database.js
 var mongoose = require('mongoose');
-var dbURI = ' mongodb://dbuser:dbpassword@ds021036.mlab.com:21036/jonidb';
+var dbURI = 'mongodb://dbuser:dbpassword@ds021036.mlab.com:21036/jonidb';
 var gracefulShutdown;
 mongoose.connect(dbURI);
 
