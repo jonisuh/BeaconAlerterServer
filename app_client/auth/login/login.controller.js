@@ -2,6 +2,8 @@
 	angular
 		.module('Vidzy')
 		.controller('LoginCtrl', loginCtrl);
+
+
 	console.log("login1");
 	loginCtrl.$inject = ['$location','authentication'];
 	function loginCtrl($location, authentication){
@@ -22,6 +24,7 @@
 			vm.formError = "";
 			if (!vm.credentials.email || !vm.credentials.password){
 				vm.formError = "All fields required, please try again";
+				alert("All fields required, please try again");
 				return false;		
 			}else{
 				console.log("succesful");

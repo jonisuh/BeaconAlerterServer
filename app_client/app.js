@@ -1,6 +1,8 @@
 (function () {
 
-  angular.module('Vidzy', ['ngResource','ngRoute']);
+  angular.module('Vidzy', ['ngResource','ngRoute'])
+    .config(['$routeProvider', config]);
+
 
   function config($routeProvider){
     $routeProvider
@@ -35,8 +37,5 @@
             redirectTo: '/'
         });
 }
-  angular
-    .module('Vidzy')
-    .config(['$routeProvider', config]);
 
 })();
