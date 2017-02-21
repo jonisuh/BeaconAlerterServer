@@ -10,6 +10,8 @@ var sendJSONresponse = function(res, status, content) {
 
 	//Get settings
 	module.exports.getSettings = function(req, res) {
+		console.log(req.body)
+		console.log(req)
 		 Settings.find(function (err, settings) {
 	  		if(err) {
 	            sendJSONresponse(res, 404, err);
@@ -28,6 +30,7 @@ var sendJSONresponse = function(res, status, content) {
 			}
 		});
 		console.log(req.body)
+		console.log(req)
 		var newSettings = new Settings({ 
 			alertSound: req.body.alertSound,
 		  	hourMode:  req.body.hourMode,
