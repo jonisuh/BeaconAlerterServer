@@ -34,5 +34,5 @@ gracefulShutdown = function (msg, callback) {
 	});
 }
 
-require('./alerts');
-require('./settings');
+require('./alertsschema');
+require('./settingsschema');
