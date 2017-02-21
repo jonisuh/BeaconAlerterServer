@@ -1,6 +1,6 @@
 // config/database.js
 var mongoose = require('mongoose');
-var dbURI = 'mongodb://localhost:27017/vidzy';
+var dbURI = 'mongodb://dbuser:dbpassword@ds157819.mlab.com:57819/beaconalerter';
 var gracefulShutdown;
 mongoose.connect(dbURI);
 
@@ -34,5 +34,5 @@ gracefulShutdown = function (msg, callback) {
 	});
 }
 
-require('./users');
-require('./videoschema');
+require('./alerts');
+require('./settings');

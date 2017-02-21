@@ -1,6 +1,6 @@
 (function () {
 
-  angular.module('Vidzy', ['ngResource','ngRoute'])
+  angular.module('BeaconAlerter', ['ngResource','ngRoute'])
     .config(['$routeProvider', config]);
 
 

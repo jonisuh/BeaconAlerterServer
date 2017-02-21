@@ -1,17 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var jwt = require('express-jwt');
-var auth = jwt({
-  secret: process.env.JWT_SECRET,
-  userProperty: 'payload'
-});
 
 var ctrlVideos = require('../controllers/videos');
-var ctrlAuth = require('../controllers/authentication');
+var ctrlVideos = require('../controllers/videos');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('', { title: 'BeaconAlerter' });
 });
 
 //videos api
@@ -21,8 +16,13 @@ router.get('/api/videos/:id', ctrlVideos.getVideoByID);
 router.put('/api/videos/:id', auth, ctrlVideos.updateVideoByID);
 router.delete('/api/videos/:id', auth, ctrlVideos.deleteVideo);
 
-//authentication
-router.post('/register', ctrlAuth.register);
-router.post('/login', ctrlAuth.login);
 
+//settings api
+router.get('/api/settings', ctrlSettings.getSettings);
+router.post('/api/settings',  ctrlSettings.postSettings);
+
+//alerts api
+router.get('/api/alerts', ctrlAlerts.getAllAlerts);
+router.post('/api/alerts/:id',  ctrlAlerts.postNewAlert);
+router.post('/api/alerts',  ctrlAlerts.postAlerts);
 module.exports = router;
