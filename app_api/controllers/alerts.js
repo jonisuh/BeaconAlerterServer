@@ -83,6 +83,8 @@ var sendJSONresponse = function(res, status, content) {
 
 		newAlert.save(function (err, newAlert) {
 			if(err) {
+				console.log("Error")
+				console.log(err)
 	            sendJSONresponse(res, 404, err);
 	        }else{
 	            sendJSONresponse(res, 200, newAlert);
