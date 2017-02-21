@@ -9,7 +9,7 @@ var sendJSONresponse = function(res, status, content) {
 };
 
 	//Get Alerts
-	module.exports.getAlerts = function(req, res) {
+	module.exports.getAllAlerts = function(req, res) {
 		 Alerts.find(function (err, alerts) {
 	  		if(err) {
 	            sendJSONresponse(res, 404, err);
