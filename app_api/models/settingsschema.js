@@ -7,9 +7,7 @@ var mongoose = require('mongoose');
 	  	snoozeOn: Boolean,
 	  	snoozeLength: Number,
 	  	snoozeAmount: Number,
-	  	soundVolume: {
-	  		type: SchemaTypes.Double
-	  	},
+	  	soundVolume: Number,
 		automaticSync: Boolean,
 		dateFormat: String
 	});
