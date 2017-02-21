@@ -1,3 +1,9 @@
+
+var jwt = require('express-jwt');
+var auth = jwt({
+	secret: process.env.JWT_SECRET,
+	userProperty: 'payload'
+});
 //MONGOOSE
 var mongoose = require('mongoose');
 

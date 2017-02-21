@@ -29,8 +29,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'app_client')));
 
-app.use(passport.initialize());
-
 app.use('/', routes);/*
 app.use('/users', users);
 app.use('/api/videos', videos);
