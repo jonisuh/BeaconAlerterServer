@@ -15,6 +15,8 @@ router.post('/api/settings',  ctrlSettings.postSettings);
 
 //alerts api
 router.get('/api/alerts', ctrlAlerts.getAllAlerts);
-router.post('/api/alerts/:id',  ctrlAlerts.postNewAlert);
-router.post('/api/alerts',  ctrlAlerts.postAlerts);
+router.post('/api/alerts/',  ctrlAlerts.postNewAlert);
+router.post('/api/alerts/all',  ctrlAlerts.postAlerts);
+//router.delete('/api/alerts/',  ctrlAlerts.postAlerts);
+//router.put('/api/alerts/',  ctrlAlerts.postAlerts);
 module.exports = router;

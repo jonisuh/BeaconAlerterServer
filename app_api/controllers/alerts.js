@@ -62,7 +62,7 @@ var sendJSONresponse = function(res, status, content) {
 	//Post one alert
 	module.exports.postNewAlert = function(req, res) {
 		console.log(req.body)
-		console.log(req)
+		//console.log(req)
 
 		var newAlert = new Alerts({ 
 			time: req.body.time,
