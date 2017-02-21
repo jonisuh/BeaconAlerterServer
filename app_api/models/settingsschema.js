@@ -1,6 +1,4 @@
 var mongoose = require('mongoose');
-	var SchemaTypes = mongoose.Schema.Types;
-
 	var settingschema = new mongoose.Schema({
 	  	alertSound: String,
 	  	hourMode: String,

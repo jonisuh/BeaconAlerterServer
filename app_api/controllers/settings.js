@@ -1,7 +1,7 @@
 //MONGOOSE
 var mongoose = require('mongoose');
 
-var Settings = mongoose.model('Setting');
+var Settings = mongoose.model('Settings');
 
 var sendJSONresponse = function(res, status, content) {
   res.status(status);
