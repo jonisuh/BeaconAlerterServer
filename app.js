@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
 require('./app_api/models/db');
-require('./app_api/config/passport');
 
 var routes = require('./app_api/routes/index');
 /*

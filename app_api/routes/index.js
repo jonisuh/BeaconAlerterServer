@@ -6,7 +6,7 @@ var ctrlAlerts = require('../controllers/alerts');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('', { title: 'BeaconAlerter' });
+  res.render('index', { title: 'BeaconAlerter' });
 });
 
 //settings api
