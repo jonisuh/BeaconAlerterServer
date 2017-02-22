@@ -30,7 +30,8 @@ var sendJSONresponse = function(res, status, content) {
 			}
 		});
 
-		for(var alert in req.body.alerts){
+		for(var i = 0, i < req.body.alerts.length; i++){
+			var alert = req.body.alerts[i]
 			console.log(alert)
 			var newAlert = new Alerts({ 
 				time: alert.time,
