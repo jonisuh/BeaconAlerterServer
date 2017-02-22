@@ -11,7 +11,6 @@ var sendJSONresponse = function(res, status, content) {
 	//Get settings
 	module.exports.getSettings = function(req, res) {
 		console.log(req.body)
-		console.log(req)
 		 Settings.find(function (err, settings) {
 	  		if(err) {
 	            sendJSONresponse(res, 404, err);
@@ -24,6 +23,7 @@ var sendJSONresponse = function(res, status, content) {
 
 	//Post settings
 	module.exports.postSettings = function(req, res) {
+		console.log(req.body)
 		Settings.remove({}, function(err){
 			if(err){
 				sendJSONresponse(res, 404, err);
