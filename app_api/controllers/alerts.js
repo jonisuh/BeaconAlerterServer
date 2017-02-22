@@ -91,3 +91,62 @@ var sendJSONresponse = function(res, status, content) {
 	        }
 		});
 	};
+
+	//Post one alert
+	module.exports.deleteAlert = function(req, res) {
+		console.log(req.body)
+		if(req.params && req.params.id){
+			Alerts.remove({"id": req.params.id}, function(err){
+				if(err){
+					sendJSONresponse(res, 404, err);
+				}else{
+					sendJSONresponse(res, 200, "Succesfully deleted.");
+				}
+			})
+		}else{
+			sendJSONresponse(res, 404, "Could not find id")
+		}
+	};
+
+	//Post one alert
+	module.exports.updateAlert = function(req, res) {
+		console.log(req.body)
+		//console.log(req)
+		if(req.params && req.params.id){
+			Alerts.remove({"id": req.params.id}, function(err){
+				if(err){
+					sendJSONresponse(res, 404, err);
+				}
+			})
+		
+			var newAlert = new Alerts({ 
+				time: req.body.time,
+			    title: req.body.title,
+			    days: {
+			    	mon : req.body.days.mon,
+			    	tue : req.body.days.tue,
+			    	wed : req.body.days.wed,
+			    	thu : req.body.days.thu,
+			    	fri : req.body.days.fri,
+			    	sat : req.body.days.sat,
+			    	sun : req.body.days.sun
+			    },
+			    repeating: req.body.repeating,
+			    isEnabled: req.body.isEnabled,
+			    id: req.body.id
+			});
+
+			newAlert.save(function (err, newAlert) {
+				if(err) {
+					console.log("Error")
+					console.log(err)
+		            sendJSONresponse(res, 404, err);
+		        }else{
+		            sendJSONresponse(res, 200, newAlert);
+		        }
+			});
+
+		}else{
+			sendJSONresponse(res, 404, "Could not find id")
+		}
+	};
