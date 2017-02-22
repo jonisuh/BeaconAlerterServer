@@ -11,7 +11,6 @@ var sendJSONresponse = function(res, status, content) {
 	//Get Alerts
 	module.exports.getAllAlerts = function(req, res) {
 		console.log(req.body)
-		console.log(req)
 		 Alerts.find(function (err, alerts) {
 	  		if(err) {
 	            sendJSONresponse(res, 404, err);
@@ -25,7 +24,6 @@ var sendJSONresponse = function(res, status, content) {
 	//Post all alerts
 	module.exports.postAlerts = function(req, res) {
 		console.log(req.body)
-		console.log(req)
 		Alerts.remove({}, function(err){
 			if(err){
 				sendJSONresponse(res, 404, err);
@@ -37,7 +35,7 @@ var sendJSONresponse = function(res, status, content) {
 			var newAlert = new Alerts({ 
 				time: alert.time,
 			    title: alert.title,
-			    days: {
+		*	    days: {
 			    	mon : alert.days.mon,
 			    	tue : alert.days.tue,
 			    	wed : alert.days.wed,
