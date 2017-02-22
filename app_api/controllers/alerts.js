@@ -56,6 +56,7 @@ var sendJSONresponse = function(res, status, content) {
 		        }
 			});
 		}
+		sendJSONresponse(res, 200, "Successfully added all alerts");
 	};
 
 	//Post one alert
