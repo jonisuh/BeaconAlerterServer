@@ -35,7 +35,7 @@ var sendJSONresponse = function(res, status, content) {
 			var newAlert = new Alerts({ 
 				time: alert.time,
 			    title: alert.title,
-		*	    days: {
+			    days: {
 			    	mon : alert.days.mon,
 			    	tue : alert.days.tue,
 			    	wed : alert.days.wed,
