@@ -29,8 +29,7 @@ var sendJSONresponse = function(res, status, content) {
 				sendJSONresponse(res, 404, err);
 			}
 		});
-		console.log(req.body)
-		console.log(req)
+		
 		var newSettings = new Settings({ 
 			alertSound: req.body.alertSound,
 		  	hourMode:  req.body.hourMode,
