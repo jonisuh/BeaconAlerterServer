@@ -38,7 +38,8 @@ var sendJSONresponse = function(res, status, content) {
 		  	snoozeAmount:  req.body.snoozeAmount,
 		  	soundVolume:  req.body.soundVolume,
 			automaticSync:  req.body.automaticSync,
-			dateFormat:  req.body.dateFormat
+			dateFormat:  req.body.dateFormat,
+			beaconID: req.body.beaconID
 		});
 
 		newSettings.save(function (err, newSettings) {

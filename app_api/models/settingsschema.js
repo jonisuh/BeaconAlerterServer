@@ -7,7 +7,8 @@ var mongoose = require('mongoose');
 	  	snoozeAmount: Number,
 	  	soundVolume: Number,
 		automaticSync: Boolean,
-		dateFormat: String
+		dateFormat: String,
+		beaconID: String
 	});
 
 	mongoose.model('Settings', settingschema);
